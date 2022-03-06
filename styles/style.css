@@ -1,0 +1,63 @@
+@import url('./_navbar.css');
+@import url('./_main.css');
+@import url('./_footer.css');
+
+* {
+  box-sizing: 0;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body[data-theme='t-light'] {
+  --button: #ff0000;
+  --main-background: #c4c4c4;
+  --background: #e5e5e5;
+  --text: #000;
+  --footer: #000;
+  --text-description: #9c9696;
+  --footer-color: #000;
+  --button-nav:url('../assets/sun.svg');
+}
+
+body[data-theme='t-dark'] {
+  --button: #1e0fa0;
+  --main-background: #a1b1c9;
+  --background: #000000;
+  --text: rgb(255, 255, 255);
+  --footer: rgb(255, 255, 255);
+  --text-description: #ffe6e6;
+  --footer-color: #1e0fa0;
+  --button-nav:url('../assets/moon.svg');
+}
+
+.data-theme {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+  grid-template-rows: 0.3fr 2.4fr 0.3fr;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: column;
+  grid-template-areas:
+    'header header'
+    'main main'
+    'footer footer';
+
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+}
+
+.header {
+  grid-area: header;
+}
+
+.main {
+  grid-area: main;
+}
+
+.footer {
+  grid-area: footer;
+}

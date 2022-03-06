@@ -1,0 +1,106 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  position: absolute;
+  z-index: 3;
+
+  margin: 2rem;
+  margin-left: 5rem;
+
+  width: 90vmax;
+}
+
+nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+
+  color: var(--text)
+}
+
+.hide {
+  display: none;
+}
+nav a:hover {
+  border-bottom: 3px solid var(--button);
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+
+}
+
+.search input {
+  padding-left: 2.5rem;
+  width: 220px;
+  height: 45px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+
+  color: var(--text-description);
+  border-radius: 5px;
+}
+
+.search img {
+  position: relative;
+  right: 13rem;
+  z-index: 3;
+}
+
+#buttonTheme {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 40px;
+
+  background: var(--background);
+  border-radius: 59px;
+  background-image: var(--button-nav);
+  background-repeat: no-repeat;
+  background-position:center;
+}
+
+input[type="checkbox"] {
+  position: relative;
+  width: 80px;
+  height: 40px;
+  -webkit-appearance: none; /* Aparência padrão do checkbox é anulada */
+  background-color: #c6c6c6; /* cor de fundo */
+  outline: none; /* sem borda externa */
+  border-radius: 20px; /* arrendodamento dos cantos */
+  box-shadow: inset 0 0 5px rgba(85, 85, 85, 0.2); /* sombra interna */
+  transition: .2s; /* tempo de transição que vai ocorrer com a cor de fundo e com a posção da bolinha*/
+  cursor: pointer;/* estabelecer que o mouse vai ter uma aparência como se fosse clicar em um botão */
+}
+
+input:checked[type="checkbox"] {
+  background-color: #000;/* cor de fundo que vai ser aplicada quando o checkbox tiver uma alteração para checked */
+}
+
+input[type="checkbox"]:before {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  background: #ffffff;
+  transform: scale(1.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: .2s;
+}
+
+input:checked[type="checkbox"]:before {
+  left: 40px;
+}
